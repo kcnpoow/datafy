@@ -6,6 +6,6 @@ export default function FavoritePage() {
       <h1>Избранное</h1>
 
       <FavoriteList />
-    </  >
+    </>
   );
 }

@@ -37,5 +37,13 @@ export default function FavoriteList() {
     fetchFavorites();
   }, []);
 
-  return <CompanyList companies={companies} loading={isLoading} />;
+  return (
+    <>
+      {!isLoading && companies.length === 0 && (
+        <p>Избранных компаний не найдено</p>
+      )}
+
+      <CompanyList companies={companies} loading={isLoading} />
+    </>
+  );
 }
