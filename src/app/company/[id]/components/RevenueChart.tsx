@@ -35,30 +35,37 @@ export default function RevenueChart({ revenues }: Props) {
     datasets: [
       {
         data,
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: '#4147BF',
+        fill: false,
       },
     ],
   };
 
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
-      title: {
-        display: true,
-        text: `Доходы компании`,
-        font: {
-          size: 20,
-        },
-      },
       legend: {
         display: false,
       },
     },
+    scales: {
+      y: {
+        ticks: {
+          callback: function (value: number | string) {
+            return value + ' млрд';
+          },
+        },
+      },
+    },
   };
-
   return (
     <div className='panel'>
-      <Line data={chartData} options={chartOptions} />
+      <h3 className='mb-6 text-xl font-semibold'>Доходы компании</h3>
+
+      <div style={{ height: '330px' }}>
+        <Line data={chartData} options={chartOptions} />
+      </div>
     </div>
   );
 }

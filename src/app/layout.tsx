@@ -3,7 +3,9 @@ import { Open_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 
-const open_sans = Open_Sans();
+const open_sans = Open_Sans({
+  subsets: ['cyrillic', 'latin'],
+});
 
 export default function RootLayout({
   children,
