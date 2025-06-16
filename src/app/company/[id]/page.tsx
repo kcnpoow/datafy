@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default async function CompanyDetails({ params }: Props) {
-  const { id } = await params;
+  const { id } = params;
 
   const company = companies.find((c) => c.id === Number(id));
 
