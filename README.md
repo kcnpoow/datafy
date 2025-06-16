@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📘 Тестовое задание: Каталог компаний + График доходов
 
-## Getting Started
+## 🎯 Цель задания
 
-First, run the development server:
+Разработать сайт на **React / Next.js**, который имитирует каталог компаний с возможностью:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- фильтрации,
+- поиска,
+- отображения детальной информации о компании,
+- отображения графика доходов.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Вы можете выбрать любой дизайн и использовать любые UI-библиотеки по своему усмотрению.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> 🎨 Дизайн из Figma: [макет](https://www.figma.com/design/M87wlRoGt2S1y3AIbQqY6i/Untitled?node-id=1-4922&t=ZXHvJE1mm98iqI7W-1)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧩 Функциональные требования
 
-To learn more about Next.js, take a look at the following resources:
+### 📄 Главная страница — Каталог компаний
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Отображение списка компаний:
+  - Название
+  - Город
+  - Уникальный номер (БИН / ИНН)
+  - Вид деятельности
+  - Руководитель
+  - Статус: Работает / Закрылся
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🔍 Поиск по названию и номеру:
+  - Работает по подстроке
+  - Результаты обновляются в реальном времени
+  - Отображается сообщение: «Компаний не найдено», если нет совпадений
+  - Поддержка lazy loading и анимаций (опционально)
 
-## Deploy on Vercel
+- ⭐ Избранное:
+  - Иконка на карточке компании для добавления в избранное
+  - Добавление и удаление из избранного при клике
+  - Сохранение избранного в `localStorage`
+  - Состояние сохраняется после перезагрузки страницы
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🧾 Страница компании
+
+- Навигация при клике на карточку:  
+  Пример URL: `/company/1234567890`
+
+- 📈 График доходов:
+  - Доходы за год (12 месяцев или 4 квартала)
+  - Линейный или столбчатый график
+  - Любая библиотека визуализации: `recharts`, `chart.js`, `nivo`, `victory` и др.
+
+---
+
+## 🧪 Бонусные фичи (необязательно)
+
+- 🌗 Темизация (Light / Dark mode)
+- 📱 Адаптивная вёрстка (под мобильные устройства)
+- 🔘 Фильтр "Показать только избранные"
+- 🎞 Анимации при переходах, наведении и т.д.
+
+---
+
+## 🛠️ Технологии
+
+- **Next.js** (App Router / Pages Router)
+- **React** (хуки: `useState`, `useEffect`, `useMemo`)
+- **TypeScript**
+- **Tailwind CSS / Material UI / Ant Design / CSS**
+- **Chart Library**: `Recharts` / `Chart.js` / `Victory` / `Nivo`
+- **Mock-данные**: локальный JSON или JS-объект (`companies.js`)
+
+---
+
+## 🚀 Деплой и демонстрация
+
+- ✅ Репозиторий: [ссылка на GitHub](https://github.com/ваш-репозиторий)
+- 📺 Видеообзор проекта: [YouTube ссылка] *(если есть)*
+- 🌐 Онлайн-демо (Vercel): [ссылка на Vercel] *(если есть)*
+
+---
+
+## 📤 Отправка результата
+
+Готовое решение отправить в **Telegram**: [@f1rumzda](https://t.me/f1rumzda)
+
+---
+
+## ⏰ Срок выполнения
+
+5 дней с момента получения задания.
+
+---
+
+## 🍀 Удачи в выполнении задания!
