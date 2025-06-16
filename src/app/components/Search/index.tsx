@@ -9,13 +9,15 @@ import useParams from '@/lib/hooks/useParams';
 import FiltersPanel from './FiltersPanel';
 
 export default function Search() {
-  const { setParam, getParam } = useParams();
+  const { setParams, getParam } = useParams();
 
   const [search, setSearch] = useState('');
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setParam('search', e.target.value);
+    setParams({
+      search: e.target.value,
+    });
     setSearch(e.target.value);
   };
 

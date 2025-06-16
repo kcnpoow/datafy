@@ -19,7 +19,7 @@ export default function SearchList() {
 
     try {
       const result = await companyService.searchCompanies();
-      
+
       setCompanies(result);
     } finally {
       setIsLoading(false);

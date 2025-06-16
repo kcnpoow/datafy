@@ -1,4 +1,3 @@
-import Company from '@/lib/types/Company';
 import companies from '@/lib/companies.json';
 
 export async function GET(
