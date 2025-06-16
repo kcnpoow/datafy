@@ -2,11 +2,11 @@ import RevenueChart from './components/RevenueChart';
 import companies from '@/lib/companies.json';
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export default async function CompanyDetails({ params }: Props) {
-  const { id } = params;
+  const { id } = await params;
 
   const company = companies.find((c) => c.id === Number(id));
 
