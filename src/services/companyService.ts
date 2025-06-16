@@ -1,10 +1,9 @@
 import Company from '@/lib/types/Company';
-import { SERVER_URL } from '@/lib/consts';
 
 class CompanyService {
   async searchCompanies(): Promise<Company[]> {
     const params = new URLSearchParams(window.location.search);
-    const url = `${SERVER_URL}/api/companies?${params.toString()}`;
+    const url = `/api/companies?${params.toString()}`;
 
     const response = await fetch(url);
     if (!response.ok) {
@@ -18,7 +17,7 @@ class CompanyService {
     if (ids.length === 0) return [];
 
     const params = new URLSearchParams({ ids: ids.join(',') });
-    const url = `${SERVER_URL}/api/companies/by-ids?${params.toString()}`;
+    const url = `/api/companies/by-ids?${params.toString()}`;
 
     const response = await fetch(url);
     if (!response.ok) {

@@ -1,6 +1,5 @@
 export const FAVORITES_KEY = 'favorites';
 export const THEME_KEY = 'theme';
-export const SERVER_URL = 'http://localhost:3000';
 
 export const CITIES: { [key: string]: string } = {
   almaty: 'Алматы',
